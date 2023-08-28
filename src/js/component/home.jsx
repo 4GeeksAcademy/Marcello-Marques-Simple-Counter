@@ -3,10 +3,6 @@ import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faClock } from '@fortawesome/free-regular-svg-icons'
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
-
-
 //create your first component
 const Home = (props) => {
 	return (
@@ -32,16 +28,8 @@ const Home = (props) => {
 		</div>
 		<div className="DigitSix">
 		<div>{Math.floor(props.count / 1) % 10} </div>
-		</div>
-
-			
-
-
-			
-			
-	
+		</div>	
 	</div>
 	);
 };
-
 export default Home;
