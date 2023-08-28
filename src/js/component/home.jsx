@@ -1,25 +1,46 @@
 import React from "react";
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faClock } from '@fortawesome/free-regular-svg-icons'
+
 //include images into your bundle
 import rigoImage from "../../img/rigo-baby.jpg";
 
+
 //create your first component
-const Home = () => {
+const Home = (props) => {
 	return (
-		<div className="text-center">
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
+
+	<div className="text-center d-flex">
+		<div className="clock">
+		<FontAwesomeIcon icon={faClock} />
 		</div>
+		<div className="DigitOne">
+		<div>{Math.floor(props.count / 100000) % 10} </div>
+		</div>
+		<div className="DigitTwo">
+		<div>{Math.floor(props.count / 10000) % 10} </div>
+		</div>
+		<div className="DigitThree">
+		<div>{Math.floor(props.count / 1000) % 10} </div>
+		</div>
+		<div className="DigitFour">
+		<div>{Math.floor(props.count / 100) % 10} </div>
+		</div>
+		<div className="DigitFive">
+		<div>{Math.floor(props.count / 10) % 10} </div>
+		</div>
+		<div className="DigitSix">
+		<div>{Math.floor(props.count / 1) % 10} </div>
+		</div>
+
+			
+
+
+			
+			
+	
+	</div>
 	);
 };
 
